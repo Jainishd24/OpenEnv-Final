@@ -5,13 +5,16 @@ description = "OpenEnv Email Triage Agent"
 requires-python = ">=3.8"
 
 dependencies = [
-    "httpx",
-    "openai",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "httpx>=0.28.1",
+    "openai>=2.7.2",
     "openenv-core>=0.2.0"
 ]
 
 [project.scripts]
-server = "server.app:main" ✅
+server = "server.app:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
