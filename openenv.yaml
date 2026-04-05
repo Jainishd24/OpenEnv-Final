@@ -1,0 +1,17 @@
+name: email_triage_env
+version: 1.0.0
+description: "A real-world OpenEnv simulation for Email Triage. Handled dynamically via HTTP API conforming to OpenEnv."
+runtime:
+  type: docker
+  dockerfile: Dockerfile
+  port: 7860
+tasks:
+  - id: easy_1
+    difficulty: easy
+    description: "Classify a single email as Spam."
+  - id: medium_1
+    difficulty: medium
+    description: "Triage customer complaint, offer refund with apology."
+  - id: hard_1
+    difficulty: hard
+    description: "Manage inbox of 3 emails, move correctly, and schedule meeting."

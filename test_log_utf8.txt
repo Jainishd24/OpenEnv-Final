@@ -1,0 +1,7 @@
+﻿Testing /reset
+Obs emails count: 1
+Taking action: {'action_type': 'reply', 'email_id': 'e2', 'content': "We apologize for the inconvenience. We've issued a refund."}
+Reward score (should be 0.5 or so for reply with refund): 0.5
+Taking action: {'action_type': 'classify', 'email_id': 'e2', 'label': 'Resolved'}
+Reward score after resolving (should be higher): 1.0
+Message: Labeled as Resolved. Polite reply with a refund offer sent.
