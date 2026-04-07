@@ -1,17 +1,17 @@
-FROM python:3.10-slim
+FROM python:3.10
 
 WORKDIR /app
 
-# Copy requirements and install
+# Copy requirements first (for caching)
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application files
+# Copy all files
 COPY . .
 
-# Set environment variables for HF Spaces
-ENV HOST=0.0.0.0
-ENV PORT=7860
+# Expose port
+EXPOSE 7860
 
-# Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+# Run your server properly
+CMD ["python", "-m", "server.app"]
